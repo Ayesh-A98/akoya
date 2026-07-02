@@ -1,0 +1,23 @@
+{
+  "heading": "Signature Lines",
+  "subheading": "THE AKOYA COLLECTION",
+
+  "card1": {
+    "title": "The Platinum Care",
+    "description": "Our premium garment care service featuring hand washing, steam treatment, and protective tissue wrapping for your finest clothing."
+  },
+
+  "card2": {
+    "title": "Executive Collection",
+    "description": "Professional care for business attire with expert pressing, stain removal, and fabric revitalization for a polished appearance."
+  },
+
+  "card3": {
+    "title": "Couture Preservation",
+    "description": "Specialized care for designer pieces and delicate fabrics. Museum-quality cleaning to preserve texture, color, and elegance."
+  },
+
+  "button": "Discover",
+
+  "viewAll": "View All Collection"
+}

@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "How Would You Like It Washed?",
+    "subtitle": "Choose your experience"
+  },
+  "wash": {
+    "standard": {
+      "title": "Standard Wash",
+      "desc": "Our signature 48-hour service with gentle cleaning, eco detergents, and basic folding.",
+      "price": "From 50 QAR"
+    },
+    "express": {
+      "title": "Express Wash",
+      "desc": "Need it fast? Get 24-hour turnaround, priority processing, and premium care.",
+      "price": "From 50 QAR"
+    }
+  },
+  "cta": {
+    "continue": "Continue to Garment Selection",
+    "book": "Book Your order"
+  },
+  "fragrances": {
+    "title": "Akoya Signature Fragrances",
+    "subtitle": "Premium scents crafted to elevate your laundry experience",
+    "add": "Add",
+    "priceRange": "4-8 QAR",
+    "maknoun": {
+      "name": "Maknoun",
+      "desc": "A luxurious fragrance that embodies charm with fresh fruits, florals, and a warm musk base."
+    },
+    "mad": {
+      "name": "Mad",
+      "desc": "A powerful masculine fragrance blending saffron, jasmine, incense and amber leather base."
+    },
+    "lulwa": {
+      "name": "Lulwa",
+      "desc": "Radiant feminine fragrance blending bergamot, ginger, patchouli and soft musk."
+    },
+    "sadf": {
+      "name": "Sadf",
+      "desc": "A refreshing fragrance with citrus, ginger and ambergris for an elegant finish."
+    }
+  },
+  "packaging": {
+    "finalTouch": "The Final Touch",
+    "optionsLabel": "PACKAGING OPTIONS",
+    "included": "Included",
+    "title": "Plastic Wrap",
+    "desc": "Crystal-clear protective wrapping with our embossed gold seal for discreet luxury.",
+    "card1": {
+      "features": [
+        "Medical-grade transparency",
+        "Anti-static interior",
+        "Recyclable material",
+        "Tamper-evident closure"
+      ]
+    },
+    "card2": {
+      "features": [
+        "Heirloom quality",
+        "Integrated scent capsule",
+        "French velvet lining",
+        "Sandalwood construction"
+      ]
+    },
+    "card3": {
+      "features": [
+        "Italian wool exterior",
+        "Silk-lined interior",
+        "Magnetic seal",
+        "Reusable design"
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  
+}
+
+.swiper-slide {
+  /* text-align: center; */
+  font-size: 18px;
+  
+
+  /* Center slide text vertically */
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  
+ 
+ 
+
+  
+
+
+ 
+}
+.swiper-button-next,
+.swiper-button-prev {
+  /* background-color: aqua; */
+  border-radius: 50px;
+height: 54px;
+width: 54px;
+ padding: 19px;
+  color: #D4AF37;  
+  background-color: #282625;
+
+}
+.swiper-button-next{
+  margin: 30px;
+ 
+
+}
+
+
+
+/* Base bullet */
+
+
+/* Normal bullet */
+
+.swiper-pagination-bullet { 
+  width: 13px !important;
+   height: 13px !important; 
+   background-color: gray !important; /* change to your color */ 
+   opacity: 0.5 !important;
+   position: relative !important;
+   top:-15px !important ;
+     margin: 5px !important; 
+  
+  } 
+   /* Active bullet */ 
+   .swiper-pagination-bullet-active {
+     height: 13px !important;
+      width: 29px !important; 
+      background-color:#d4af37 !important;
+        opacity: 1 !important; 
+        border-radius: 10px !important;
+      
+      }
+     
+/* If you have a special active-main class */
+.swiper-pagination-bullet-active-main {
+  height: 10px;
+  width: 14px;
+  background-color: #d4af37 ;
+  transform: scale(1.3);
+}
+.newdiv{
+  background-color: none;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "vision": "Vision & Mission",
+    "contact": "Contact",
+    "login": "Client Login",
+    "book": "Book Now",
+    "english": "English",
+    "urdu": "اردو"
+  },
+
+  "swiper": {
+    "slide1": {
+      "title": "Premium Garment Care",
+      "subtitle": "Expert cleaning for your most delicate fabrics"
+    },
+    "slide2": {
+      "title": "Eco-Conscious Cleaning",
+      "subtitle": "Sustainable methods without compromising quality"
+    },
+    "slide3": {
+      "title": "Precision Pressing",
+      "subtitle": "Impeccable finishes for business and formalwear"
+    },
+    "button": "Schedule Pickup"
+  }
+}

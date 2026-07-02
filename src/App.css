@@ -1,0 +1,60 @@
+/* Swiper container */
+.mySwiper {
+  width: 80%;
+  height: 450px;
+  margin: 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Each slide */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Custom slide colors */
+.swiper-slide:nth-child(1) {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+}
+
+.swiper-slide:nth-child(2) {
+  background: linear-gradient(135deg, #ef4444, #7f1d1d);
+}
+
+.swiper-slide:nth-child(3) {
+  background: linear-gradient(135deg, #22c55e, #14532d);
+}
+
+.swiper-slide:nth-child(4) {
+  background: linear-gradient(135deg, #f59e0b, #7c2d12);
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  width: 45px !important;
+  height: 45px !important;
+  transition: 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Arrow icon size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+}
