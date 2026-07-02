@@ -10,248 +10,55 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setService } from "../Redux/ServiceSlice";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./Swiper1.css";
+import "./swiper1.css";
 
-
+// NOTE: title/desc/price are now looked up from translation files via item.id.
+// img, category, and icon stay here since they aren't language-dependent.
 const ALL_SERVICES = [
-  {
-    id: 1,
-    title: "Dry Cleaning",
-    desc: "Expert care for suits and delicate fabrics using eco-friendly solvents.",
-    price: "From 6 QAR",
-    category: "Dry Cleaning",
-    img: "/src/assets/dryCleaning.webp",
-    icon: "🧥",
-  },
-  {
-    id: 2,
-    title: "Executive Pressing",
-    desc: "Crisp finishes for business attire with precision steam technology.",
-    price: "From 3 QAR",
-    category: "Pressing",
-    img: "/src/assets/exectivePressing.webp",
-    icon: "👔",
-  },
-  {
-    id: 3,
-    title: "Couture Care",
-    desc: "Hand-cleaning for designer garments and delicate fabrics.",
-    price: "From 7 QAR",
-    category: "Specialty",
-    img: "/src/assets/care.webp",
-    icon: "👗",
-  },
-  {
-    id: 4,
-    title: "Express Service",
-    desc: "3-hour turnaround for urgent garment needs",
-    price: "+30% Premium",
-    category: "Traditional",
-    img: "/src/assets/sehedulePickup.webp",
-    icon: "⚡",
-  },
-  {
-    id: 5,
-    title: "Fragrance Infusion",
-    desc: "Luxury scent options for your garments",
-    price: "5 QAR",
-    category: "Express",
-    img: "/src/assets/fragrance.webp",
-    icon: "🌸",
-  },
-  {
-    id: 6,
-    title: "Dishdasha",
-    desc: "Professional care for men's traditional Qatari garment",
-    price: "From 4 QAR",
-    category: "Add-On",
-    img: "/src/assets/dishdasha.webp",
-    icon: "👳‍♂️",
-  },
-  {
-    id: 7,
-    title: "Child Dishdasha",
-    desc: "Specialized care for children's traditional garments",
-    price: "From 25 QAR",
-    category: "Traditional",
-    img: "/src/assets/child_dishdasha.webp",
-    icon: "👦",
-  },
-  {
-    id: 8,
-    title: "Bisht",
-    category: "Traditional",
-    desc: "Premium care for ceremonial cloak with gold detailing",
-    price: "From 7 QAR",
-    img: "/src/assets/bisht.webp",
-    icon: "✨",
-  },
-  {
-    id: 9,
-    category: "Traditional",
-    title: "Ghutra",
-    desc: "Gentle cleaning for traditional headwear",
-    price: "From 3 QAR",
-    img: "/src/assets/ghutra.webp",
-    icon: "⚡",
-  },
-  {
-    id: 10,
-    title: "Kurta",
-    category: "Traditional",
-    desc: "Care for traditional South Asian tunic",
-    price: "From 4 QAR",
-    img: "/src/assets/kurta.webp",
-    icon: "👘",
-  },
-  {
-    id: 11,
-    title: "Kurta Pyjama (Set)",
-    category: "Traditional",
-    desc: "Complete set cleaning for traditional attire",
-    price: "From 6 QAR",
-    img: "/src/assets/kurtaPajama.webp",
-    icon: "👖",
-  },
-  {
-    id: 12,
-    title: "Kameez",
-    category: "Traditional",
-    desc: "Professional care for traditional long shirts.",
-    price: "From 3 QAR",
-    img: "/src/assets/kameez.webp",
-    icon: "👕",
-  },
-  {
-    id: 13,
-    title: "Jalabiya",
-    category: "Traditional",
-    desc: "Specialized care for flowing traditional gowns.",
-    price: "From 7 QAR",
-    img: "/src/assets/jalabiya.webp",
-    icon: "👚",
-  },
-  {
-    id: 14,
-    category: "Traditional",
-    title: "Abaya",
-    desc: "Professional cleaning for everyday abayas",
-    price: "From 10 QAR",
-    img: "/src/assets/abaya.webp",
-    icon: "✨",
-  },
-  {
-    id: 15,
-    title: "Abaya Special",
-    category: "Traditional",
-    desc: "Premium care for embellished abayas",
-    price: "5 QAR",
-    img: "/src/assets/abaya_special.webp",
-    icon: "✨",
-  },
-  {
-    id: 16,
-    title: "Hijab",
-    desc: "Delicate cleaning for headscarves",
-    category: "Dry Cleaning",
-    price: "From 6 QAR",
-    img: "/src/assets/hijab.webp",
-    icon: "🧣",
-  },
-  {
-    id: 17,
-    title: "Gent Suit (3pcs)",
-    category: "Pressing",
-    desc: "Complete care for 3-piece suits",
-    price: "From 12 QAR",
-    img: "/src/assets/gent_suit.webp",
-    icon: "👗",
-  },
-  {
-    id: 18,
-    title: "Dress (short)",
-    category: "Specialty",
-    desc: "Specialized care for evening gowns",
-    price: "From 15 QAR",
-    img: "/src/assets/dress.webp",
-    icon: "👰",
-  },
-  {
-    id: 19,
-    title: "Overcoat",
-    desc: "Winter coat cleaning and preservation",
-    price: "From 7 QAR",
-    category: "Specialty",
-    img: "/src/assets/overcoat.webp",
-    icon: "🧥",
-  },
-  {
-    id: 20,
-    title: "Military Uniform",
-    desc: "Regimental standard cleaning and pressing",
-    price: "From 9 QAR",
-    img: "/src/assets/military_suite.webp",
-    category: "Add-On",
-    icon: "🌸",
-  },
-  {
-    id: 21,
-    title: "Blouse (Special)",
-    desc: "Delicate care for embellished top",
-    price: "From 6 QAR",
-    img: "/src/assets/blouse.webp",
-    category: "Express",
-    icon: "👚",
-  },
-  {
-    id: 22,
-    category: "Specialty",
-    title: "Bath Robe",
-    desc: "Deep cleaning for plush bathrobes",
-    price: "From 3 QAR",
-    img: "/src/assets/bathrob.webp",
-    icon: "🛁",
-  },
-  {
-    id: 23,
-    title: "Dress (Long)",
-    desc: "Specialized care for evening gowns",
-    price: "From 17 QAR",
-    img: "/src/assets/dresslong.webp",
-    category: "Express",
-    icon: "🛁",
-  },
+  { id: 1, category: "Dry Cleaning", img: "/src/assets/dryCleaning.webp", icon: "🧥" },
+  { id: 2, category: "Pressing", img: "/src/assets/exectivePressing.webp", icon: "👔" },
+  { id: 3, category: "Specialty", img: "/src/assets/care.webp", icon: "👗" },
+  { id: 4, category: "Traditional", img: "/src/assets/sehedulePickup.webp", icon: "⚡" },
+  { id: 5, category: "Express", img: "/src/assets/fragrance.webp", icon: "🌸" },
+  { id: 6, category: "Add-On", img: "/src/assets/dishdasha.webp", icon: "👳‍♂️" },
+  { id: 7, category: "Traditional", img: "/src/assets/child_dishdasha.webp", icon: "👦" },
+  { id: 8, category: "Traditional", img: "/src/assets/bisht.webp", icon: "✨" },
+  { id: 9, category: "Traditional", img: "/src/assets/ghutra.webp", icon: "⚡" },
+  { id: 10, category: "Traditional", img: "/src/assets/kurta.webp", icon: "👘" },
+  { id: 11, category: "Traditional", img: "/src/assets/kurtaPajama.webp", icon: "👖" },
+  { id: 12, category: "Traditional", img: "/src/assets/kameez.webp", icon: "👕" },
+  { id: 13, category: "Traditional", img: "/src/assets/jalabiya.webp", icon: "👚" },
+  { id: 14, category: "Traditional", img: "/src/assets/abaya.webp", icon: "✨" },
+  { id: 15, category: "Traditional", img: "/src/assets/abaya_special.webp", icon: "✨" },
+  { id: 16, category: "Dry Cleaning", img: "/src/assets/hijab.webp", icon: "🧣" },
+  { id: 17, category: "Pressing", img: "/src/assets/gent_suit.webp", icon: "👗" },
+  { id: 18, category: "Specialty", img: "/src/assets/dress.webp", icon: "👰" },
+  { id: 19, category: "Specialty", img: "/src/assets/overcoat.webp", icon: "🧥" },
+  { id: 20, category: "Add-On", img: "/src/assets/military_suite.webp", icon: "🌸" },
+  { id: 21, category: "Express", img: "/src/assets/blouse.webp", icon: "👚" },
+  { id: 22, category: "Specialty", img: "/src/assets/bathrob.webp", icon: "🛁" },
+  { id: 23, category: "Express", img: "/src/assets/dresslong.webp", icon: "🛁" },
 ];
 
-const slides = [
-  {
-    img: "/src/assets/eco.webp",
-    title: "Premium Garment Care",
-    subtitle: "Expert cleaning for your most delicate fabrics",
-  },
-  {
-    img: "/src/assets/pCollection.webp",
-    title: "Eco-Conscious Cleaning",
-    subtitle: "Sustainable methods without compromising quality",
-  },
-  {
-    img: "/src/assets/expert.webp",
-    title: "Precision Pressing",
-    subtitle: "Impeccable finishes for business and formalwear",
-  },
+const SLIDES = [
+  { img: "/src/assets/eco.webp", key: "slide1" },
+  { img: "/src/assets/pCollection.webp", key: "slide2" },
+  { img: "/src/assets/expert.webp", key: "slide3" },
 ];
 
 const Narbarser = () => {
+  // "translation5" is the namespace this component's strings live in (see i18n.js)
+  const { t, i18n } = useTranslation("translation5");
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
 
   const reduxServices = useSelector((state) => state.service.services);
   const services =
@@ -264,18 +71,26 @@ const Narbarser = () => {
   const categories = ["All", ...new Set(ALL_SERVICES.map((s) => s.category))];
 
   const handleNext = (service) => {
-    dispatch(setService(service));
+    // attach translated text before pushing to redux/booking flow
+    const translated = {
+      ...service,
+      title: t(`services.${service.id}.title`),
+      desc: t(`services.${service.id}.desc`),
+      price: t(`services.${service.id}.price`),
+    };
+    dispatch(setService(translated));
     navigate("/book");
   };
-
 
   const filteredServices =
     activeCategory === "All"
       ? services
       : services.filter((service) => service.category === activeCategory);
 
+  const isRTL = i18n.language === "ur";
+
   return (
-    <div className="relative">
+    <div className="relative" dir={isRTL ? "rtl" : "ltr"}>
       <Swiper
         modules={[Pagination, Autoplay]}
         navigation
@@ -286,7 +101,7 @@ const Narbarser = () => {
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         className="mySwiper"
       >
-        {slides.map((slide, index) => (
+        {SLIDES.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               className="relative w-full h-[570px] bg-cover bg-center flex flex-col justify-center items-center text-center"
@@ -294,21 +109,16 @@ const Narbarser = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C1C]/80 via-[#1C1C1C]/40 to-[#1C1C1C]/10"></div>
 
-              <div
-                className="relative z-20 flex flex-col items-center transition-transform duration-700"
-                style={{
-                  transform: `translateX(${(index - activeIndex) * 100}%)`,
-                }}
-              >
+              <div className="relative z-20 flex flex-col items-center">
                 <h1 className="text-5xl md:text-6xl font-thin text-white">
-                  {slide.title}
+                  {t(`hero.${slide.key}.title`)}
                 </h1>
                 <p className="text-lg md:text-xl text-yellow-400 mt-4">
-                  {slide.subtitle}
+                  {t(`hero.${slide.key}.subtitle`)}
                 </p>
                 <Link to="/book">
                   <button className="mt-6 px-6 py-3 bg-yellow-400 text-black font-medium rounded-full hover:bg-yellow-500 transition-all duration-300">
-                    Schedule Pickup
+                    {t("hero.cta")}
                   </button>
                 </Link>
               </div>
@@ -319,13 +129,13 @@ const Narbarser = () => {
 
       <div className="relative top-18 bg-[#F8F5F2]">
         <center className="text-5xl bg-[#FAF9F7] font-light relative top-8">
-          Our Services
+          {t("sectionHeader.ourServices")}
         </center>
         <br />
         <div className="flex justify-center items-center">
           <div className="h-px w-16 relative mx-4 top-3 bg-[#D4AF37]"></div>
           <h4 className="h-[40px] w-[280px] relative top-4.5 text-[20px] tracking-widest text-[#D4AF37] font-medium">
-            LUXURY GARMENT CARE
+            {t("sectionHeader.tagline")}
           </h4>
           <div className="h-px w-16 relative top-3.5 mx- bg-[#D4AF37]"></div>
         </div>
@@ -333,7 +143,7 @@ const Narbarser = () => {
 
       <div className="bg-gray-100 min-h-screen py-10">
         <h2 className="text-center text-sm tracking-widest text-yellow-600 font-semibold">
-          LUXURY GARMENT CARE
+          {t("sectionHeader.tagline")}
         </h2>
 
         {/* CATEGORY BUTTONS */}
@@ -348,7 +158,7 @@ const Narbarser = () => {
                   : "bg-white text-gray-700 hover:bg-gray-200"
               }`}
             >
-              {cat}
+              {t(`categories.${cat}`)}
             </button>
           ))}
         </div>
@@ -373,7 +183,7 @@ const Narbarser = () => {
                 <div className="relative h-56 w-full overflow-hidden transition-transform duration-500 hover:scale-110">
                   <img
                     src={item.img}
-                    alt={item.title}
+                    alt={t(`services.${item.id}.title`)}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4 w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center shadow">
@@ -384,15 +194,15 @@ const Narbarser = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-semibold text-gray-800">
-                      {item.title}
+                      {t(`services.${item.id}.title`)}
                     </h3>
                     <span className="text-[#D4AF37] text-sm font-semibold">
-                      {item.price}
+                      {t(`services.${item.id}.price`)}
                     </span>
                   </div>
 
                   <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-                    {item.desc}
+                    {t(`services.${item.id}.desc`)}
                   </p>
 
                   <motion.div className="relative mt-4 h-[1px] bg-gray overflow-hidden">
@@ -409,7 +219,7 @@ const Narbarser = () => {
                     onClick={() => handleNext(item)}
                     className="mt-5 w-full bg-[#D4AF37] hover:bg-black text-black hover:text-[#D4AF37] font-medium py-3 rounded-lg transition"
                   >
-                    Order +
+                    {t("orderButton")}
                   </button>
                 </div>
               </motion.div>
@@ -421,16 +231,14 @@ const Narbarser = () => {
       {/* CTA SECTION */}
       <div className="w-full bg-[#1C1C1C] py-24 px-6 text-center mt-25">
         <h2 className="text-4xl md:text-3xl font-light text-[#D4AF37]">
-          Need Personalized Service?
+          {t("cta.heading")}
         </h2>
         <p className="max-w-5xl mx-auto mt-6 text-gray-300 text-medium">
-          Our VIP concierge team is available 24/7 to handle special requests,
-          delicate items, or bulk orders for businesses and <br />
-          residences.
+          {t("cta.text")}
         </p>
         <Link to="/contact">
           <button className="mt-10 px-10 py- pt-4 bg-[#D4AF37] transition-all duration-500 hover:scale-105 text-black text-lg font-medium rounded-full hover:bg-[#c9a52e] transition-all duration-300">
-            Contact Concierge{" "}
+            {t("cta.button")}{" "}
             <LuMessageCircleMore className="relative -top-6 left-39" />
           </button>
         </Link>
@@ -448,10 +256,7 @@ const Narbarser = () => {
               alt="Akoya Logo"
               className="w-40 mb-6"
             />
-            <p className="leading-relaxed text-white">
-              Luxury garment care redefined. Serving Doha's discerning clients
-              with unparalleled quality and service.
-            </p>
+            <p className="leading-relaxed text-white">{t("footer.about")}</p>
             <div className="flex gap-4 mt-6 text-xl text-gray-400">
               <span className="hover:text-[#D4AF37] cursor-pointer">
                 <BsTwitterX />
@@ -468,40 +273,32 @@ const Narbarser = () => {
           {/* Column 2 */}
           <div>
             <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-              OUR SERVICES
+              {t("footer.servicesHeading")}
             </h3>
             <ul className="space-y-4">
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › Premium Laundry
-              </li>
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › Dry Cleaning
-              </li>
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › Steam Pressing
-              </li>
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › Fragrance Infusion
-              </li>
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › Couture Care
-              </li>
-              <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
-                › VIP Club
-              </li>
+              {t("footer.servicesList", { returnObjects: true }).map(
+                (s, i) => (
+                  <li
+                    key={i}
+                    className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500"
+                  >
+                    › {s}
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
           {/* Column 3 */}
           <div>
             <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-              CONTACT US
+              {t("footer.contactHeading")}
             </h3>
             <div className="space-y-4 text-gray-400">
-              <p>Area: Al Wakrah</p>
-              <p>Zone: 90</p>
-              <p>Street No.: 693</p>
-              <p>Building No.: 35</p>
+              <p>{t("footer.area")}</p>
+              <p>{t("footer.zone")}</p>
+              <p>{t("footer.street")}</p>
+              <p>{t("footer.building")}</p>
               <p className="mt-4">+97433689955</p>
               <p>+97433689996</p>
               <p className="mt-4">info@akoyaluxurylaundry.com</p>
@@ -511,33 +308,31 @@ const Narbarser = () => {
           {/* Column 4 */}
           <div>
             <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-              NEWSLETTER
+              {t("footer.newsletterHeading")}
             </h3>
-            <p className="text-gray-400 mb-6">
-              Subscribe for exclusive offers and garment care tips.
-            </p>
+            <p className="text-gray-400 mb-6">{t("footer.newsletterText")}</p>
             <input
               type="email"
-              placeholder="Your email address"
+              placeholder={t("footer.emailPlaceholder")}
               className="w-full bg-[#1a1a1a] border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-[#D4AF37]"
             />
             <button
               onClick={() => window.scrollTo(0, 0)}
               className="w-full mt-4 bg-[#D4AF37] text-black py-3 rounded-md hover:bg-[#c9a52e] transition"
             >
-              Subscribe
+              {t("footer.subscribe")}
             </button>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>© 2025 AKOYA Luxury Laundry. All rights reserved.</p>
+          <p>{t("footer.copyright")}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <span className="hover:text-[#D4AF37] cursor-pointer">
-              Privacy Policy
+              {t("footer.privacy")}
             </span>
             <span className="hover:text-[#D4AF37] cursor-pointer">
-              Terms of Service
+              {t("footer.terms")}
             </span>
           </div>
         </div>
