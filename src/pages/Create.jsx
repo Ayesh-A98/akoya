@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate, Link } from "react-router-dom";
 import { User, Mail, Lock, Check, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Create = () => {
   const { t, i18n } = useTranslation("translation10");
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     name: "",
@@ -15,11 +16,11 @@ const Create = () => {
     agree: false,
   });
 
+  const [error, setError] = useState("");
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
-
-    console.log(`Field changed -> ${name}: ${newValue}`);
 
     setForm({
       ...form,
@@ -30,27 +31,47 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const passwordsMatch = form.password === form.confirmPassword && form.password !== "";
-
-    console.log("── CREATE ACCOUNT SUBMIT ──────────────────────");
-    console.log("Name:", form.name);
-    console.log("Email:", form.email);
-    console.log("Phone (WhatsApp):", form.phone);
-    console.log("Passwords match:", passwordsMatch);
-    console.log("Agreed to terms:", form.agree);
-    console.log("Full form state:", form);
-    console.log("────────────────────────────────────────────────");
-
-    if (!passwordsMatch) {
-      console.warn("Password and Confirm Password do not match!");
+    // --- Validation ---
+    if (
+      !form.name.trim() ||
+      !form.email.trim() ||
+      !form.password.trim() ||
+      !form.confirmPassword.trim() ||
+      !form.phone.trim()
+    ) {
+      setError(t("errors.fillAllFields", "Please fill in all fields."));
+      return;
     }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setError(t("errors.invalidEmail", "Please enter a valid email address."));
+      return;
+    }
+
+    if (form.password.length < 6) {
+      setError(t("errors.passwordTooShort", "Password must be at least 6 characters."));
+      return;
+    }
+
+    if (form.password !== form.confirmPassword) {
+      setError(t("errors.passwordsDontMatch", "Passwords do not match."));
+      return;
+    }
+
     if (!form.agree) {
-      console.warn("User has not agreed to terms and conditions.");
+      setError(t("errors.mustAgreeTerms", "You must agree to the terms and conditions."));
+      return;
     }
+
+    // --- Success ---
+    setError("");
+    localStorage.setItem("login", true);
+    navigate("/");
+    navigate(0);
   };
 
   const changeLanguage = (lng) => {
-    console.log("Language changed to:", lng);
     i18n.changeLanguage(lng);
   };
 
@@ -205,6 +226,11 @@ const Create = () => {
               </span>
             </span>
           </div>
+
+          {/* Error message */}
+          {error && (
+            <p className="text-red-500 text-sm text-center">{error}</p>
+          )}
 
           {/* Button */}
           <button
