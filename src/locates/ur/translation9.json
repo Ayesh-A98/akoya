@@ -1,0 +1,141 @@
+{
+  "app": {
+    "title": "اکویا پریمیم لانڈری",
+    "step": "مرحلہ 1 از 1",
+    "footerNote": "اپنا مکمل آرڈر ایک ہی صفحے پر مکمل کریں: قسم، آئٹم، سروس، اضافی چیزیں، پیکنگ، اور تحفے کی تفصیلات"
+  },
+  "categories": {
+    "men": "مرد",
+    "women": "خواتین",
+    "other": "دیگر"
+  },
+  "labels": {
+    "chooseServiceType": "سروس کی قسم منتخب کریں:",
+    "selectItemThenService": "پہلے آئٹم کی قسم منتخب کریں، پھر سروس چنیں",
+    "menGroup": "مردانہ",
+    "womenGroup": "زنانہ",
+    "otherGroup": "دیگر اشیاء",
+    "chooseServiceForItem": "اس آئٹم کے لیے سروس منتخب کریں",
+    "oudQuestion": "کیا آپ چاہتے ہیں کہ آپ کے کپڑوں میں عود کی خوشبو لگائی جائے؟",
+    "chooseOudType": "اپنی پسندیدہ عود کی قسم منتخب کریں:",
+    "perfumeQuestion": "کیا آپ چاہتے ہیں کہ آپ کے کپڑوں کو خوشبو لگائی جائے؟",
+    "packagingQuestion": "آپ اپنے کپڑوں کی پیکنگ کیسے چاہتے ہیں؟",
+    "packagingSub": "ہر کپڑے کے آئٹم کے لیے الگ الگ پیکنگ منتخب کریں",
+    "selectPackaging": "پیکنگ منتخب کریں",
+    "giftQuestion": "کیا آپ اسے کسی دوست کے پاس بھیجنا چاہتے ہیں؟",
+    "giftYesTitle": "ہاں",
+    "giftYesSub": "کارڈ کے ساتھ دوست کو ڈیلیور کریں",
+    "giftNoTitle": "نہیں",
+    "giftNoSub": "براہ راست آپ کو ڈیلیور کریں",
+    "friendName": "دوست کا نام",
+    "friendNamePlaceholder": "اپنے دوست کا نام درج کریں",
+    "requiredField": "یہ خانہ پُر کرنا لازمی ہے",
+    "personalizedCard": "کیا آپ ذاتی نوعیت کا کارڈ شامل کرنا چاہتے ہیں؟",
+    "from": "بھیجنے والا",
+    "fromPlaceholder": "آپ کا نام (لازمی)*",
+    "to": "وصول کنندہ (اختیاری)",
+    "toPlaceholder": "وصول کنندہ کا نام (اختیاری)",
+    "yes": "ہاں",
+    "no": "نہیں"
+  },
+  "items": {
+    "thobe": "تھوب",
+    "bisht": "بشت",
+    "suit": "مردانہ سوٹ",
+    "ghutra": "غترہ",
+    "shirt": "قمیض",
+    "tie": "ٹائی",
+    "tshirt": "ٹی شرٹ",
+    "vest": "ویسٹ",
+    "coat": "کوٹ",
+    "pajamas": "پاجامہ",
+    "shorts": "شارٹس",
+    "trousers": "پتلون",
+    "kandura": "کندورہ",
+    "jubba": "جبہ",
+    "abaya": "عبایا",
+    "dress": "ڈریس",
+    "blouse": "بلاؤز",
+    "skirt": "اسکرٹ",
+    "jacket": "جیکٹ",
+    "scarf": "اسکارف",
+    "shayla": "شیلا",
+    "jalabiya": "جلابیہ",
+    "suit_w": "زنانہ سوٹ",
+    "cardigan": "کارڈیگن",
+    "trousers_w": "پتلون",
+    "pajamas_w": "پاجامہ",
+    "blanket": "کمبل",
+    "curtain": "پردہ",
+    "bedsheet": "بیڈ شیٹ",
+    "tablecloth": "میز پوش",
+    "pillow": "تکیہ کور",
+    "duvet": "لحاف",
+    "towel": "تولیہ",
+    "carpet": "قالین"
+  },
+  "services": {
+    "wash_iron": "دھلائی اور استری",
+    "wash_iron_perf": "دھلائی، استری اور خوشبو کی سروس",
+    "dry_clean": "ڈرائی کلین"
+  },
+  "oudTypes": {
+    "cambodian": {
+      "label": "پریمیم کمبوڈین عود",
+      "desc": "خالص کمبوڈین عود، گہری اور بھرپور خوشبو کے ساتھ"
+    },
+    "bokhour": {
+      "label": "بخور الدانہ",
+      "desc": "منفرد اور خالص خوشبو والا پریمیم بخور"
+    }
+  },
+  "packaging": {
+    "plastic": { "label": "پلاسٹک", "sub": "مفت" },
+    "premium": { "label": "پریمیم فیبرک", "sub": "+10 ریال" },
+    "giftbox": { "label": "گفٹ باکس", "sub": "+4 ریال" },
+    "colors": {
+      "Gray": "خاکستری",
+      "Cream": "کریمی",
+      "Black": "کالا"
+    }
+  },
+  "summary": {
+    "title": "آرڈر کا خلاصہ",
+    "serviceType": "سروس کی قسم:",
+    "garments": "کپڑے:",
+    "incense": "خوشبو",
+    "packagingLabel": "پیکنگ:",
+    "couponPlaceholder": "کوپن کوڈ درج کریں",
+    "applyCoupon": "کوپن لگائیں",
+    "sendToFriend": "دوست کو بھیجیں",
+    "friendNameLine": "دوست کا نام",
+    "personalizedCardTitle": "ذاتی نوعیت کا کارڈ",
+    "fromLine": "بھیجنے والا",
+    "toLine": "وصول کنندہ (اختیاری)",
+    "finalPrice": "حتمی قیمت",
+    "bookNow": "ابھی بک کریں",
+    "currency": "ریال"
+  },
+  "footer": {
+    "aboutText": "شاہانہ لباس کی دیکھ بھال از سرِ نو۔ دوحہ کے باذوق گاہکوں کو بے مثال معیار اور خدمت فراہم کرتے ہیں۔",
+    "servicesTitle": "ہماری خدمات",
+    "service1": "پریمیم لانڈری",
+    "service2": "ڈرائی کلیننگ",
+    "service3": "اسٹیم پریسنگ",
+    "service4": "خوشبو کی شمولیت",
+    "service5": "کوچر کیئر",
+    "service6": "وی آئی پی کلب",
+    "contactTitle": "ہم سے رابطہ کریں",
+    "area": "علاقہ: الوکرہ",
+    "zone": "زون: 90",
+    "street": "گلی نمبر: 693",
+    "building": "عمارت نمبر: 35",
+    "newsletterTitle": "نیوز لیٹر",
+    "newsletterText": "خصوصی پیشکشوں اور کپڑوں کی دیکھ بھال کے مشوروں کے لیے سبسکرائب کریں۔",
+    "emailPlaceholder": "آپ کا ای میل پتہ",
+    "subscribe": "سبسکرائب کریں",
+    "copyright": "© 2025 اکویا لگژری لانڈری۔ جملہ حقوق محفوظ ہیں۔",
+    "privacy": "پرائیویسی پالیسی",
+    "terms": "شرائط و ضوابط"
+  }
+}

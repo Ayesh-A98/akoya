@@ -11,16 +11,16 @@ export const Landingpage3 = () => {
   // Each packaging card keeps its own image + "features" translation key,
   // but shares the same title/desc/included copy from the JSON files.
   const packagingCards = [
-    { image: "/src/assets/suit-plastic-new.webp", featuresKey: "packaging.card1.features", imgHeight: "h-[260px] sm:h-[300px] md:h-[340px]" },
-    { image: "/src/assets/package.webp", featuresKey: "packaging.card2.features", imgHeight: "h-[220px] sm:h-[260px] md:h-[300px]" },
-    { image: "/src/assets/BOX.webp", featuresKey: "packaging.card3.features", imgHeight: "h-[220px] sm:h-[260px] md:h-[300px]" },
+    { image: "/suit-plastic-new.webp", featuresKey: "packaging.card1.features", imgHeight: "h-[260px] sm:h-[300px] md:h-[340px]" },
+    { image: "/package.webp", featuresKey: "packaging.card2.features", imgHeight: "h-[220px] sm:h-[260px] md:h-[300px]" },
+    { image: "/BOX.webp", featuresKey: "packaging.card3.features", imgHeight: "h-[220px] sm:h-[260px] md:h-[300px]" },
   ];
 
   const fragrances = [
-    { key: "maknoun", image: "/src/assets/maknoun.webp" },
-    { key: "mad", image: "/src/assets/mad.webp" },
-    { key: "lulwa", image: "/src/assets/lulwa.webp" },
-    { key: "sadf", image: "/src/assets/sadf.webp" },
+    { key: "maknoun", image: "/maknoun.webp" },
+    { key: "mad", image: "/mad.webp" },
+    { key: "lulwa", image: "/lulwa.webp" },
+    { key: "sadf", image: "/sadf.webp" },
   ];
 
   return (

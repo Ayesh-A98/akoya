@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "slide1": { "title": "Premium Garment Care", "subtitle": "Expert cleaning for your most delicate fabrics" },
+    "slide2": { "title": "Eco-Conscious Cleaning", "subtitle": "Sustainable methods without compromising quality" },
+    "slide3": { "title": "Precision Pressing", "subtitle": "Impeccable finishes for business and formalwear" }
+  },
+  "heading": {
+    "title": "Contact Us",
+    "tagline": "GET IN TOUCH"
+  },
+  "info": {
+    "reachUsTitle": "How to reach us",
+    "reachUsText": "Our concierge team is available to assist you with any inquiries about our luxury laundry services. Reach out via your preferred method and we'll respond promptly.",
+    "location": { "label": "Location", "value": "West Bay, Doha, Qatar" },
+    "phone": { "label": "Phone", "value": "+974 1234 5678" },
+    "email": { "label": "Email", "value": "info@akoyalaundry.com" },
+    "followUs": "Follow Us"
+  },
+  "form": {
+    "title": "Send us a message",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your name",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "yourMessage": "Your Message",
+    "messagePlaceholder": "How can we help you?",
+    "sendButton": "Send Message"
+  },
+  "footer": {
+    "about": "Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.",
+    "servicesHeading": "OUR SERVICES",
+    "servicesList": ["Premium Laundry", "Dry Cleaning", "Steam Pressing", "Fragrance Infusion", "Couture Care", "VIP Club"],
+    "contactHeading": "CONTACT US",
+    "area": "Area: Al Wakrah",
+    "zone": "Zone: 90",
+    "street": "Street No.: 693",
+    "building": "Building No.: 35",
+    "newsletterHeading": "NEWSLETTER",
+    "newsletterText": "Subscribe for exclusive offers and garment care tips.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 AKOYA Luxury Laundry. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

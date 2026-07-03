@@ -1,0 +1,141 @@
+{
+  "app": {
+    "title": "AKOYA PREMIUM LAUNDRY",
+    "step": "Step 1 of 1",
+    "footerNote": "Complete your full order in one page: category, item, service, add-ons, packaging, and gifting details"
+  },
+  "categories": {
+    "men": "Men",
+    "women": "Women",
+    "other": "Other"
+  },
+  "labels": {
+    "chooseServiceType": "Choose Service Type:",
+    "selectItemThenService": "Select item type, then choose service",
+    "menGroup": "Men's",
+    "womenGroup": "Women's",
+    "otherGroup": "Other Items",
+    "chooseServiceForItem": "Choose service for this item",
+    "oudQuestion": "Would you like your clothes to be incensed with Oud?",
+    "chooseOudType": "Choose your preferred Oud type:",
+    "perfumeQuestion": "Would you like your clothes to be perfumed?",
+    "packagingQuestion": "How would you like us to package your garments?",
+    "packagingSub": "Choose packaging for each garment item individually",
+    "selectPackaging": "Select packaging",
+    "giftQuestion": "Do you want to send it to a friend?",
+    "giftYesTitle": "Yes",
+    "giftYesSub": "Deliver to friend with card",
+    "giftNoTitle": "No",
+    "giftNoSub": "Deliver to you directly",
+    "friendName": "Friend's name",
+    "friendNamePlaceholder": "Enter your friend's name",
+    "requiredField": "This field is required",
+    "personalizedCard": "Want to include a personalized card?",
+    "from": "From",
+    "fromPlaceholder": "Your name (required)*",
+    "to": "To (optional)",
+    "toPlaceholder": "Recipient's name (optional)",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "items": {
+    "thobe": "Thobe",
+    "bisht": "Bisht",
+    "suit": "Men's Suit",
+    "ghutra": "Ghutra",
+    "shirt": "Shirt",
+    "tie": "Tie",
+    "tshirt": "T-shirt",
+    "vest": "Vest",
+    "coat": "Coat",
+    "pajamas": "Pajamas",
+    "shorts": "Shorts",
+    "trousers": "Trousers",
+    "kandura": "Kandura",
+    "jubba": "Jubba",
+    "abaya": "Abaya",
+    "dress": "Dress",
+    "blouse": "Blouse",
+    "skirt": "Skirt",
+    "jacket": "Jacket",
+    "scarf": "Scarf",
+    "shayla": "Shayla",
+    "jalabiya": "Jalabiya",
+    "suit_w": "Women's Suit",
+    "cardigan": "Cardigan",
+    "trousers_w": "Trousers",
+    "pajamas_w": "Pajamas",
+    "blanket": "Blanket",
+    "curtain": "Curtain",
+    "bedsheet": "Bed Sheet",
+    "tablecloth": "Tablecloth",
+    "pillow": "Pillow Cover",
+    "duvet": "Duvet",
+    "towel": "Towel",
+    "carpet": "Carpet"
+  },
+  "services": {
+    "wash_iron": "Washing & Ironing",
+    "wash_iron_perf": "Washing, Ironing, and Perfume Services",
+    "dry_clean": "Dry Clean"
+  },
+  "oudTypes": {
+    "cambodian": {
+      "label": "Premium Cambodian Oud",
+      "desc": "Authentic Cambodian oud with rich, deep aroma"
+    },
+    "bokhour": {
+      "label": "Bokhour Al Dana",
+      "desc": "Premium incense with distinctive authentic scent"
+    }
+  },
+  "packaging": {
+    "plastic": { "label": "Plastic", "sub": "Free" },
+    "premium": { "label": "Premium Fabric", "sub": "+10 QAR" },
+    "giftbox": { "label": "Gift Box", "sub": "+4 QAR" },
+    "colors": {
+      "Gray": "Gray",
+      "Cream": "Cream",
+      "Black": "Black"
+    }
+  },
+  "summary": {
+    "title": "Order Summary",
+    "serviceType": "Service Type:",
+    "garments": "Garments:",
+    "incense": "Incense",
+    "packagingLabel": "Packaging:",
+    "couponPlaceholder": "Enter coupon code",
+    "applyCoupon": "Apply Coupon",
+    "sendToFriend": "send to friend",
+    "friendNameLine": "friendName",
+    "personalizedCardTitle": "Personalized Card",
+    "fromLine": "From",
+    "toLine": "To (optional)",
+    "finalPrice": "Final Price",
+    "bookNow": "Book Now",
+    "currency": "QAR"
+  },
+  "footer": {
+    "aboutText": "Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.",
+    "servicesTitle": "OUR SERVICES",
+    "service1": "Premium Laundry",
+    "service2": "Dry Cleaning",
+    "service3": "Steam Pressing",
+    "service4": "Fragrance Infusion",
+    "service5": "Couture Care",
+    "service6": "VIP Club",
+    "contactTitle": "CONTACT US",
+    "area": "Area: Al Wakrah",
+    "zone": "Zone: 90",
+    "street": "Street No.: 693",
+    "building": "Building No.: 35",
+    "newsletterTitle": "NEWSLETTER",
+    "newsletterText": "Subscribe for exclusive offers and garment care tips.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 AKOYA Luxury Laundry. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

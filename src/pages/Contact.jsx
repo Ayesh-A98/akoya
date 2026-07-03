@@ -5,7 +5,6 @@ import { Autoplay, EffectFade, Pagination } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
-import { div } from "framer-motion/client"
 
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
@@ -14,28 +13,21 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-const slides = [
-  {
-    image: "/src/assets/platinumCare.webp",
-    title: "Premium Garment Care",
-    subtitle: "Expert cleaning for your most delicate fabrics",
-  },
-  {
-    image: "/src/assets/eco.webp",
-    title: "Eco-Conscious Cleaning",
-    subtitle: "Sustainable methods without compromising quality",
-  },
-  {
-    image: "/src/assets/pressing.webp",
-    title: "Precision Pressing",
-    subtitle: "Impeccable finishes for business and formalwear",
-  },
+const SLIDES = [
+  { image: "/platinumCare.webp", key: "slide1" },
+  { image: "/eco.webp", key: "slide2" },
+  { image: "/pressing.webp", key: "slide3" },
 ]
 
 const Contact = () => {
+  // "translation7" is the namespace this page's strings live in (see i18n.js)
+  const { t, i18n } = useTranslation("translation7");
+  const isRTL = i18n.language === "ur";
+
   return (
-    <div>
+    <div dir={isRTL ? "rtl" : "ltr"}>
     <div className="w-full h-[70vh]">
     <Swiper
       modules={[Autoplay, EffectFade, Pagination]}
@@ -49,12 +41,12 @@ const Contact = () => {
       pagination={{ clickable: true }}
       className="w-full h-[50vh]"   // 👈 reduced height
     >
-      {slides.map((slide, index) => (
+      {SLIDES.map((slide, index) => (
         <SwiperSlide key={index} className="relative">
           
           <img
             src={slide.image}
-            alt={slide.title}
+            alt={t(`hero.${slide.key}.title`)}
             className="w-full h-[50vh] object-cover"  // 👈 reduced height
           />
 
@@ -62,10 +54,10 @@ const Contact = () => {
 
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 text-white z-10">
             <h2 className="text-2xl md:text-5xl font-light mb-3">
-              {slide.title}
+              {t(`hero.${slide.key}.title`)}
             </h2>
             <p className="text-amber-300 text-base md:text-lg">
-              {slide.subtitle}
+              {t(`hero.${slide.key}.subtitle`)}
             </p>
           </div>
 
@@ -83,11 +75,11 @@ const Contact = () => {
  
     {/* Heading */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-light mb-3">Contact Us</h2>
+      <h2 className="text-4xl font-light mb-3">{t("heading.title")}</h2>
       <div className="flex items-center justify-center gap-4">
         <div className="w-12 h-[1px] bg-amber-500"></div>
         <p className="text-amber-500 tracking-widest text-sm">
-          GET IN TOUCH
+          {t("heading.tagline")}
         </p>
         <div className="w-12 h-[1px] bg-amber-500"></div>
       </div>
@@ -99,12 +91,10 @@ const Contact = () => {
       {/* Left Side */}
       <div>
         <h3 className="text-xl font-semibold mb-4">
-          How to reach us
+          {t("info.reachUsTitle")}
         </h3>
         <p className="text-gray-600 mb-10 leading-relaxed">
-          Our concierge team is available to assist you with any inquiries
-          about our luxury laundry services. Reach out via your preferred
-          method and we’ll respond promptly.
+          {t("info.reachUsText")}
         </p>
 
         <div className="space-y-8">
@@ -115,8 +105,8 @@ const Contact = () => {
               <FaLocationDot />
             </div>
             <div>
-              <h4 className="font-semibold">Location</h4>
-              <p className="text-gray-600">West Bay, Doha, Qatar</p>
+              <h4 className="font-semibold">{t("info.location.label")}</h4>
+              <p className="text-gray-600">{t("info.location.value")}</p>
             </div>
           </div>
 
@@ -126,8 +116,8 @@ const Contact = () => {
               <FaPhone />
             </div>
             <div>
-              <h4 className="font-semibold">Phone</h4>
-              <p className="text-gray-600">+974 1234 5678</p>
+              <h4 className="font-semibold">{t("info.phone.label")}</h4>
+              <p className="text-gray-600">{t("info.phone.value")}</p>
             </div>
           </div>
 
@@ -137,8 +127,8 @@ const Contact = () => {
               <MdOutlineEmail />
             </div>
             <div>
-              <h4 className="font-semibold">Email</h4>
-              <p className="text-gray-600">info@akoyalaundry.com</p>
+              <h4 className="font-semibold">{t("info.email.label")}</h4>
+              <p className="text-gray-600">{t("info.email.value")}</p>
             </div>
           </div>
 
@@ -146,7 +136,7 @@ const Contact = () => {
         {/* Follow Us */}
 <div className="mt-12">
   <h4 className="text-lg font-semibold mb-6">
-    Follow Us
+    {t("info.followUs")}
   </h4>
 
   <div className="flex gap-6">
@@ -183,46 +173,46 @@ const Contact = () => {
       {/* Right Side (Form) */}
       <div className="bg-white rounded-2xl shadow-lg p-10">
         <h3 className="text-xl font-semibold mb-8">
-          Send us a message
+          {t("form.title")}
         </h3>
 
         <form className="space-y-6">
 
           <div>
             <label className="text-sm font-medium">
-              Full Name
+              {t("form.fullName")}
             </label>
             <input
               type="text"
               className="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              placeholder="Enter your name"
+              placeholder={t("form.fullNamePlaceholder")}
             />
           </div>
 
           <div>
             <label className="text-sm font-medium">
-              Email Address
+              {t("form.emailAddress")}
             </label>
             <input
               type="email"
               className="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              placeholder="Enter your email"
+              placeholder={t("form.emailPlaceholder")}
             />
           </div>
 
           <div>
             <label className="text-sm font-medium">
-              Your Message
+              {t("form.yourMessage")}
             </label>
             <textarea
               rows="4"
               className="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              placeholder="How can we help you?"
+              placeholder={t("form.messagePlaceholder")}
             ></textarea>
           </div>
 
           <button className="w-full bg-black text-white py-3 rounded-lg hover:bg-amber-500 transition">
-            Send Message
+            {t("form.sendButton")}
           </button>
 
         </form>
@@ -242,14 +232,13 @@ const Contact = () => {
     {/* Column 1 - Logo + About */}
     <div>
       <img
-        src="/src/assets/companylogo.png"
+        src="/companylogo.png"
         alt="Akoya Logo"
         className="w-40 mb-6"
       />
 
       <p className="leading-relaxed text-white">
-        Luxury garment care redefined. Serving Doha's discerning clients with
-        unparalleled quality and service.
+        {t("footer.about")}
       </p>
 
       <div className="flex gap-4 mt-6 text-xl text-gray-400">
@@ -262,30 +251,29 @@ const Contact = () => {
     {/* Column 2 - Services */}
     <div>
       <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-        OUR SERVICES
+        {t("footer.servicesHeading")}
       </h3>
 
       <ul className="space-y-4">
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Premium Laundry</li>
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Dry Cleaning</li>
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Steam Pressing</li>
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Fragrance Infusion</li>
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Couture Care</li>
-        <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› VIP Club</li>
+        {t("footer.servicesList", { returnObjects: true }).map((s, i) => (
+          <li key={i} className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
+            › {s}
+          </li>
+        ))}
       </ul>
     </div>
 
     {/* Column 3 - Contact */}
     <div>
       <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-        CONTACT US
+        {t("footer.contactHeading")}
       </h3>
 
       <div className="space-y-4 text-gray-400">
-        <p>Area: Al Wakrah</p>
-        <p>Zone: 90</p>
-        <p>Street No.: 693</p>
-        <p>Building No.: 35</p>
+        <p>{t("footer.area")}</p>
+        <p>{t("footer.zone")}</p>
+        <p>{t("footer.street")}</p>
+        <p>{t("footer.building")}</p>
 
         <p className="mt-4">+97433689955</p>
         <p>+97433689996</p>
@@ -297,23 +285,23 @@ const Contact = () => {
     {/* Column 4 - Newsletter */}
     <div>
       <h3 className="text-[#D4AF37] text-lg tracking-widest mb-6">
-        NEWSLETTER
+        {t("footer.newsletterHeading")}
       </h3>
 
       <p className="text-gray-400 mb-6">
-        Subscribe for exclusive offers and garment care tips.
+        {t("footer.newsletterText")}
       </p>
 
       <input
         type="email"
-        placeholder="Your email address"
+        placeholder={t("footer.emailPlaceholder")}
         className="w-full bg-[#1a1a1a] border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-[#D4AF37]"
       />
 
       <button onClick={() => {
     window.scrollTo(0, 0);
   }}  className="w-full mt-4 bg-[#D4AF37] text-black py-3 rounded-md hover:bg-[#c9a52e] transition">
-        Subscribe
+        {t("footer.subscribe")}
       </button>
     </div>
 
@@ -322,11 +310,11 @@ const Contact = () => {
   {/* Bottom Section */}
   <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
 
-    <p>© 2025 AKOYA Luxury Laundry. All rights reserved.</p>
+    <p>{t("footer.copyright")}</p>
 
     <div className="flex gap-6 mt-4 md:mt-0">
-      <span className="hover:text-[#D4AF37] cursor-pointer">Privacy Policy</span>
-      <span className="hover:text-[#D4AF37] cursor-pointer">Terms of Service</span>
+      <span className="hover:text-[#D4AF37] cursor-pointer">{t("footer.privacy")}</span>
+      <span className="hover:text-[#D4AF37] cursor-pointer">{t("footer.terms")}</span>
     </div>
 
   </div>

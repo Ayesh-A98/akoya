@@ -1,0 +1,20 @@
+{
+  "header": {
+    "brand": "اکویا لگژری لانڈری",
+    "subtitle": "اپنے اکاؤنٹ میں سائن ان کریں"
+  },
+  "form": {
+    "emailLabel": "ای میل ایڈریس",
+    "emailPlaceholder": "your@email.com",
+    "passwordLabel": "پاس ورڈ",
+    "passwordPlaceholder": "••••••••",
+    "rememberMe": "مجھے یاد رکھیں",
+    "forgotPassword": "پاس ورڈ بھول گئے؟",
+    "signInButton": "سائن ان کریں",
+    "dividerText": "اکویا میں نئے ہیں؟",
+    "createAccount": "اپنا اکاؤنٹ بنائیں"
+  },
+  "errors": {
+    "fillAllFields": "براہ کرم تمام خانے پُر کریں"
+  }
+}

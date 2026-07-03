@@ -1,5 +1,5 @@
-import React from "react";    
-import { CiCalendar } from "react-icons/ci"; 
+import React from "react";
+import { CiCalendar } from "react-icons/ci";
 import { FaCheck } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 import { IoAdd } from "react-icons/io5";
@@ -12,8 +12,37 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Landingpage1 = () => {
+  const { t } = useTranslation("translation3");
+
+  const steps = [
+    {
+      key: "step1",
+      icon: <IoBagOutline className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />,
+      video: "/Pickup.mp4",
+      number: 1,
+      layout: "video-left",
+    },
+    {
+      key: "step2",
+      icon: <IoBagOutline className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />,
+      video: "/professional_collection.mp4",
+      number: 2,
+      layout: "video-right",
+    },
+    {
+      key: "step3",
+      icon: <CiCalendar className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />,
+      video: "/ExpertProcessing.mp4",
+      number: 3,
+      layout: "video-left",
+    },
+  ];
+
+  const clubBenefits = t("club.benefits", { returnObjects: true });
+  const footerServices = t("footer.services", { returnObjects: true });
 
   return (
     <div className="bg-[#F1EEEB] overflow-x-hidden">
@@ -25,14 +54,14 @@ const Landingpage1 = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <center className="text-3xl sm:text-4xl lg:text-5xl font-light relative top-8 px-4">
-            How It Works
+            {t("howItWorks.title")}
           </center>
           <br />
 
           <div className="flex flex-col sm:flex-row justify-center items-center px-4 gap-2 sm:gap-0">
             <div className="hidden sm:block h-px w-16 relative mx-4 top-3 bg-[#D4AF37]"></div>
             <h4 className="h-auto sm:h-[40px] w-full sm:w-[320px] relative sm:top-4.5 text-[14px] sm:text-[18px] lg:text-[20px] tracking-widest text-[#D4AF37] font-medium text-center">
-              SEAMLESS PICKUP PROCESS
+              {t("howItWorks.subtitle")}
             </h4>
             <div className="hidden sm:block h-px w-16 relative top-3.5 bg-[#D4AF37]"></div>
           </div>
@@ -63,7 +92,7 @@ const Landingpage1 = () => {
                   loop
                   muted
                   playsInline
-                  src="/src/assets/Pickup.mp4"
+                  src="/Pickup.mp4"
                 />
 
                 {/* Number Circle */}
@@ -78,12 +107,12 @@ const Landingpage1 = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <IoBagOutline className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />
                   <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
-                    Professional Collection
+                    {t("steps.step1.title")}
                   </h2>
                 </div>
 
                 <p className="text-gray-700 text-sm sm:text-[16px] mb-6">
-                  Our uniformed valets arrive in discreet luxury vehicles with garment bags.
+                  {t("steps.step1.desc")}
                 </p>
 
                 <div className="border-t border-gray-200 mb-6"></div>
@@ -92,14 +121,14 @@ const Landingpage1 = () => {
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Contactless pickup available
+                      {t("steps.step1.feature1")}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Digital receipt provided
+                      {t("steps.step1.feature2")}
                     </span>
                   </div>
                 </div>
@@ -126,12 +155,12 @@ const Landingpage1 = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <IoBagOutline className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />
                   <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
-                    Expert Processing
+                    {t("steps.step2.title")}
                   </h2>
                 </div>
 
                 <p className="text-gray-700 text-sm sm:text-[16px] mb-6">
-                  Your garments receive specialized care at our state-of-the-art facility.
+                  {t("steps.step2.desc")}
                 </p>
 
                 <div className="border-t border-gray-200 mb-6"></div>
@@ -140,14 +169,14 @@ const Landingpage1 = () => {
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Individual garment tracking
+                      {t("steps.step2.feature1")}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Quality control at every stage
+                      {t("steps.step2.feature2")}
                     </span>
                   </div>
                 </div>
@@ -162,7 +191,7 @@ const Landingpage1 = () => {
                   loop
                   muted
                   playsInline
-                  src="/src/assets/professional_collection.mp4"
+                  src="/professional_collection.mp4"
                 />
 
                 {/* Number Circle (mobile/tablet only, since lg circle is hidden on the side) */}
@@ -191,7 +220,7 @@ const Landingpage1 = () => {
                   loop
                   muted
                   playsInline
-                  src="/src/assets/ExpertProcessing.mp4"
+                  src="/ExpertProcessing.mp4"
                 />
 
                 {/* Number Circle */}
@@ -206,12 +235,12 @@ const Landingpage1 = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <CiCalendar className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />
                   <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
-                    Schedule Your Pickup
+                    {t("steps.step3.title")}
                   </h2>
                 </div>
 
                 <p className="text-gray-700 text-sm sm:text-[16px] mb-6">
-                  Book through our app, WhatsApp, or website. We offer flexible 2-hour pickup windows.
+                  {t("steps.step3.desc")}
                 </p>
 
                 <div className="border-t border-gray-200 mb-6"></div>
@@ -220,14 +249,14 @@ const Landingpage1 = () => {
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      24/7 booking availability
+                      {t("steps.step3.feature1")}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Recurring pickup scheduling available
+                      {t("steps.step3.feature2")}
                     </span>
                   </div>
                 </div>
@@ -258,12 +287,12 @@ const Landingpage1 = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <FaCheck className="text-3xl sm:text-4xl text-[#d4af37] shrink-0" />
                   <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
-                    Luxury Delivery
+                    {t("steps.step4.title")}
                   </h2>
                 </div>
 
                 <p className="text-gray-700 text-sm sm:text-[16px] mb-6">
-                  Our uniformed valets arrive in discreet luxury vehicles with garment bags.
+                  {t("steps.step4.desc")}
                 </p>
 
                 <div className="border-t border-gray-200 mb-6"></div>
@@ -272,14 +301,14 @@ const Landingpage1 = () => {
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Contactless pickup available
+                      {t("steps.step4.feature1")}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <FaCheck className="text-yellow-600 shrink-0" />
                     <span className="text-gray-700 text-[14px]">
-                      Digital receipt provided
+                      {t("steps.step4.feature2")}
                     </span>
                   </div>
                 </div>
@@ -289,9 +318,9 @@ const Landingpage1 = () => {
               {/* Image */}
               <div className="relative w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-[350px] rounded-2xl shadow-md overflow-hidden group order-1 lg:order-2">
                 <img
-                  src="/src/assets/luxury.webp"
+                  src="/luxury.webp"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  alt="Luxury Delivery"
+                  alt={t("steps.step4.title")}
                 />
                 {/* Number Circle (mobile/tablet only) */}
                 <div className="absolute lg:hidden flex justify-center items-center text-base font-bold text-white bg-amber-400 h-[42px] w-[42px] rounded-full shadow-lg z-30 -right-3 top-1/2 -translate-y-1/2">
@@ -312,7 +341,7 @@ const Landingpage1 = () => {
         >
           <div className="flex justify-center relative top-[10px] sm:top-[20px] px-4">
             <button className="transition-all duration-600 hover:scale-105 px-6 sm:px-8 w-full sm:w-[250px] py-3.5 sm:py-4 bg-[#1C1C1C] text-white rounded-full font-medium flex items-center justify-center gap-3 text-sm tracking-wider">
-              Schedule Your Pickup <IoAdd className="text-lg" />
+              {t("cta.schedulePickup")} <IoAdd className="text-lg" />
             </button>
           </div>
         </motion.div>
@@ -329,63 +358,44 @@ const Landingpage1 = () => {
 
             <div className="relative h-[280px] w-[280px] sm:h-[380px] sm:w-[380px] lg:h-[500px] lg:w-[500px] bg-amber-400 mx-4 my-8 lg:m-26 rounded-2xl">
               <div className="flex items-center absolute h-[40px] sm:h-[48px] w-[150px] sm:w-[170px] px-4 sm:px-5 gap-2 sm:gap-3 rounded-[30px] font-bold text-sm sm:text-base bg-amber-300 right-[-10px] sm:right-[-25px] -top-[15px] sm:-top-[20px]">
-                <HiOutlineSparkles className="text-[16px] sm:text-[20px]" /> EXCLUSIVE
+                <HiOutlineSparkles className="text-[16px] sm:text-[20px]" /> {t("club.badge")}
               </div>
               <img
                 className="h-full w-full rounded-2xl object-cover"
-                src="/src/assets/aquaClub.webp"
-                alt="Akoya Club"
+                src="/aquaClub.webp"
+                alt={t("club.title")}
               />
             </div>
 
             <div className="w-full lg:w-[500px] px-6 sm:px-10 lg:px-0">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-yellow-400">
-                Akoya Club
+                {t("club.title")}
               </h2>
 
               <p className="mt-4 text-sm tracking-widest uppercase text-gray-300">
-                For the few who know
+                {t("club.tagline")}
               </p>
 
               <p className="mt-6 max-w-xl text-sm sm:text-base text-gray-300 leading-relaxed">
-                Our invitation-only membership program offers unparalleled benefits
-                for those who demand the absolute best in garment care and convenience.
+                {t("club.desc")}
               </p>
 
               <ul className="mt-8 space-y-4 text-sm sm:text-base text-gray-200">
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Priority scheduling with 2-hour pickup windows
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Dedicated garment concierge
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Complimentary fragrance infusion
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Luxury packaging as standard
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Bi-annual complimentary couture care
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="mt-1 shrink-0" />
-                  Exclusive seasonal offers
-                </li>
+                {(Array.isArray(clubBenefits) ? clubBenefits : []).map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <FaCheck className="mt-1 shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
               </ul>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4 pb-8 lg:pb-0">
                 <button className="px-6 py-3 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition">
-                  Request Invitation +
+                  {t("club.requestInvitation")}
                 </button>
 
                 <button className="px-6 py-3 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">
-                  Learn More
+                  {t("club.learnMore")}
                 </button>
               </div>
             </div>
@@ -406,13 +416,13 @@ const Landingpage1 = () => {
             >
               <div>
                 <img
-                  src="/src/assets/companylogo.png"
+                  src="/companylogo.png"
                   alt="Akoya Logo"
                   className="w-32 sm:w-40 mb-6"
                 />
 
                 <p className="mt-4 text-sm leading-relaxed">
-                  Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.
+                  {t("footer.companyDesc")}
                 </p>
 
                 <div className="flex gap-4 mt-4 text-gray-400 text-lg">
@@ -430,14 +440,13 @@ const Landingpage1 = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <div>
-                <h3 className="text-yellow-400 font-semibold mb-4">OUR SERVICES</h3>
+                <h3 className="text-yellow-400 font-semibold mb-4">{t("footer.servicesTitle")}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Premium Laundry</li>
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Dry Cleaning</li>
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Steam Pressing</li>
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Fragrance Infusion</li>
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› Couture Care</li>
-                  <li className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">› VIP Club</li>
+                  {(Array.isArray(footerServices) ? footerServices : []).map((service) => (
+                    <li key={service} className="hover:text-[#D4AF37] cursor-pointer hover:translate-x-2 duration-500">
+                      › {service}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </motion.div>
@@ -449,23 +458,23 @@ const Landingpage1 = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <div>
-                <h3 className="text-yellow-400 font-semibold mb-4">CONTACT US</h3>
+                <h3 className="text-yellow-400 font-semibold mb-4">{t("footer.contactTitle")}</h3>
 
                 <ul className="space-y-4 text-sm">
 
                   <li className="flex items-start gap-3">
                     <IoLocationSharp className="text-yellow-400 mt-1 shrink-0" />
-                    <span>West Bay, Doha, Qatar</span>
+                    <span>{t("footer.address")}</span>
                   </li>
 
                   <li className="flex items-start gap-3">
                     <FaPhoneAlt className="text-yellow-400 mt-1 shrink-0" />
-                    <span>+974 3368 9993</span>
+                    <span>{t("footer.phone")}</span>
                   </li>
 
                   <li className="flex items-start gap-3">
                     <MdOutlineEmail className="text-yellow-400 mt-1 shrink-0" />
-                    <span className="break-all">info@akoyaluxurylaundry.com</span>
+                    <span className="break-all">{t("footer.email")}</span>
                   </li>
 
                 </ul>
@@ -479,14 +488,14 @@ const Landingpage1 = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <div>
-                <h3 className="text-yellow-400 font-semibold mb-4">NEWSLETTER</h3>
+                <h3 className="text-yellow-400 font-semibold mb-4">{t("footer.newsletterTitle")}</h3>
                 <p className="text-sm mb-4">
-                  Subscribe for exclusive offers and garment care tips.
+                  {t("footer.newsletterDesc")}
                 </p>
 
                 <input
                   type="email"
-                  placeholder="Your email address"
+                  placeholder={t("footer.emailPlaceholder")}
                   className="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400"
                 />
 
@@ -496,18 +505,18 @@ const Landingpage1 = () => {
                   }}
                   className="mt-4 w-full bg-yellow-400 text-black py-3 rounded hover:bg-yellow-300 transition"
                 >
-                  Subscribe
+                  {t("footer.subscribe")}
                 </button>
               </div>
             </motion.div>
           </div>
 
           <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-500 text-center md:text-left">
-            <p>© 2025 AKOYA Luxury Laundry. All rights reserved.</p>
+            <p>{t("footer.copyright")}</p>
 
             <div className="flex gap-6">
-              <span>Privacy Policy</span>
-              <span>Terms of Service</span>
+              <span>{t("footer.privacyPolicy")}</span>
+              <span>{t("footer.termsOfService")}</span>
             </div>
           </div>
 

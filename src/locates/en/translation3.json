@@ -1,0 +1,74 @@
+{
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "SEAMLESS PICKUP PROCESS"
+  },
+  "steps": {
+    "step1": {
+      "title": "Professional Collection",
+      "desc": "Our uniformed valets arrive in discreet luxury vehicles with garment bags.",
+      "feature1": "Contactless pickup available",
+      "feature2": "Digital receipt provided"
+    },
+    "step2": {
+      "title": "Expert Processing",
+      "desc": "Your garments receive specialized care at our state-of-the-art facility.",
+      "feature1": "Individual garment tracking",
+      "feature2": "Quality control at every stage"
+    },
+    "step3": {
+      "title": "Schedule Your Pickup",
+      "desc": "Book through our app, WhatsApp, or website. We offer flexible 2-hour pickup windows.",
+      "feature1": "24/7 booking availability",
+      "feature2": "Recurring pickup scheduling available"
+    },
+    "step4": {
+      "title": "Luxury Delivery",
+      "desc": "Our uniformed valets arrive in discreet luxury vehicles with garment bags.",
+      "feature1": "Contactless pickup available",
+      "feature2": "Digital receipt provided"
+    }
+  },
+  "cta": {
+    "schedulePickup": "Schedule Your Pickup"
+  },
+  "club": {
+    "badge": "EXCLUSIVE",
+    "title": "Akoya Club",
+    "tagline": "For the few who know",
+    "desc": "Our invitation-only membership program offers unparalleled benefits for those who demand the absolute best in garment care and convenience.",
+    "benefits": [
+      "Priority scheduling with 2-hour pickup windows",
+      "Dedicated garment concierge",
+      "Complimentary fragrance infusion",
+      "Luxury packaging as standard",
+      "Bi-annual complimentary couture care",
+      "Exclusive seasonal offers"
+    ],
+    "requestInvitation": "Request Invitation +",
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "companyDesc": "Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.",
+    "servicesTitle": "OUR SERVICES",
+    "services": [
+      "Premium Laundry",
+      "Dry Cleaning",
+      "Steam Pressing",
+      "Fragrance Infusion",
+      "Couture Care",
+      "VIP Club"
+    ],
+    "contactTitle": "CONTACT US",
+    "address": "West Bay, Doha, Qatar",
+    "phone": "+974 3368 9993",
+    "email": "info@akoyaluxurylaundry.com",
+    "newsletterTitle": "NEWSLETTER",
+    "newsletterDesc": "Subscribe for exclusive offers and garment care tips.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 AKOYA Luxury Laundry. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

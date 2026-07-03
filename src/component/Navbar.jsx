@@ -48,7 +48,7 @@ console.log("Translation:", t("navbar.home"));
         {/* Logo */}
         <img
           className="h-[40px]"
-          src="/src/assets/companylogo.png"
+          src="/companylogo.png"
           alt="logo"
         />
 

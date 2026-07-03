@@ -6,7 +6,7 @@ import SwiperSection from './component/Swiper'
 import Landingpage2 from './component/Landingpage2'
 import Landingpage3 from './component/Landingpage3'
 import Landingpage1 from './component/Landingpage1'
-import Black from './component/Black'
+
 import Narbarser from './pages/Navbarser'
 import Aboutbar from './pages/Aboutbar'
 import Vision from './pages/Vision'
@@ -27,7 +27,7 @@ const Home = () => {
       <Landingpage2 />
       <Landingpage3 />
       <Landingpage1 />
-      <Black />
+      
     </>
   )
 }

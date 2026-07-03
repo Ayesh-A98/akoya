@@ -1,0 +1,26 @@
+{
+  "header": {
+    "brand": "اکویا لگژری لانڈری",
+    "subtitle": "اپنا پریمیم اکاؤنٹ بنائیں"
+  },
+  "fields": {
+    "fullName": "پورا نام",
+    "fullNamePlaceholder": "اپنا پورا نام درج کریں",
+    "email": "ای میل ایڈریس",
+    "emailPlaceholder": "your@email.com",
+    "password": "پاس ورڈ",
+    "confirmPassword": "پاس ورڈ کی تصدیق کریں",
+    "whatsapp": "واٹس ایپ فون نمبر",
+    "whatsappPlaceholder": "+1234567890",
+    "whatsappHint": "اپنا مکمل واٹس ایپ نمبر ملکی کوڈ کے ساتھ درج کریں (مثلاً، +1234567890)"
+  },
+  "terms": {
+    "agreePrefix": "میں اس سے اتفاق کرتا/کرتی ہوں",
+    "agreeLink": "شرائط و ضوابط"
+  },
+  "actions": {
+    "createAccount": "اکاؤنٹ بنائیں",
+    "alreadyHaveAccount": "پہلے سے اکاؤنٹ ہے؟",
+    "signIn": "سائن ان کریں"
+  }
+}

@@ -20,35 +20,35 @@ import "./swiper1.css";
 // NOTE: title/desc/price are now looked up from translation files via item.id.
 // img, category, and icon stay here since they aren't language-dependent.
 const ALL_SERVICES = [
-  { id: 1, category: "Dry Cleaning", img: "/src/assets/dryCleaning.webp", icon: "🧥" },
-  { id: 2, category: "Pressing", img: "/src/assets/exectivePressing.webp", icon: "👔" },
-  { id: 3, category: "Specialty", img: "/src/assets/care.webp", icon: "👗" },
-  { id: 4, category: "Traditional", img: "/src/assets/sehedulePickup.webp", icon: "⚡" },
-  { id: 5, category: "Express", img: "/src/assets/fragrance.webp", icon: "🌸" },
-  { id: 6, category: "Add-On", img: "/src/assets/dishdasha.webp", icon: "👳‍♂️" },
-  { id: 7, category: "Traditional", img: "/src/assets/child_dishdasha.webp", icon: "👦" },
-  { id: 8, category: "Traditional", img: "/src/assets/bisht.webp", icon: "✨" },
-  { id: 9, category: "Traditional", img: "/src/assets/ghutra.webp", icon: "⚡" },
-  { id: 10, category: "Traditional", img: "/src/assets/kurta.webp", icon: "👘" },
-  { id: 11, category: "Traditional", img: "/src/assets/kurtaPajama.webp", icon: "👖" },
-  { id: 12, category: "Traditional", img: "/src/assets/kameez.webp", icon: "👕" },
-  { id: 13, category: "Traditional", img: "/src/assets/jalabiya.webp", icon: "👚" },
-  { id: 14, category: "Traditional", img: "/src/assets/abaya.webp", icon: "✨" },
-  { id: 15, category: "Traditional", img: "/src/assets/abaya_special.webp", icon: "✨" },
-  { id: 16, category: "Dry Cleaning", img: "/src/assets/hijab.webp", icon: "🧣" },
-  { id: 17, category: "Pressing", img: "/src/assets/gent_suit.webp", icon: "👗" },
-  { id: 18, category: "Specialty", img: "/src/assets/dress.webp", icon: "👰" },
-  { id: 19, category: "Specialty", img: "/src/assets/overcoat.webp", icon: "🧥" },
-  { id: 20, category: "Add-On", img: "/src/assets/military_suite.webp", icon: "🌸" },
-  { id: 21, category: "Express", img: "/src/assets/blouse.webp", icon: "👚" },
-  { id: 22, category: "Specialty", img: "/src/assets/bathrob.webp", icon: "🛁" },
-  { id: 23, category: "Express", img: "/src/assets/dresslong.webp", icon: "🛁" },
+  { id: 1, category: "Dry Cleaning", img: "/dryCleaning.webp", icon: "🧥" },
+  { id: 2, category: "Pressing", img: "/exectivePressing.webp", icon: "👔" },
+  { id: 3, category: "Specialty", img: "/care.webp", icon: "👗" },
+  { id: 4, category: "Traditional", img: "/sehedulePickup.webp", icon: "⚡" },
+  { id: 5, category: "Express", img: "/fragrance.webp", icon: "🌸" },
+  { id: 6, category: "Add-On", img: "/dishdasha.webp", icon: "👳‍♂️" },
+  { id: 7, category: "Traditional", img: "/child_dishdasha.webp", icon: "👦" },
+  { id: 8, category: "Traditional", img: "/bisht.webp", icon: "✨" },
+  { id: 9, category: "Traditional", img: "/ghutra.webp", icon: "⚡" },
+  { id: 10, category: "Traditional", img: "/kurta.webp", icon: "👘" },
+  { id: 11, category: "Traditional", img: "/kurtaPajama.webp", icon: "👖" },
+  { id: 12, category: "Traditional", img: "/kameez.webp", icon: "👕" },
+  { id: 13, category: "Traditional", img: "/jalabiya.webp", icon: "👚" },
+  { id: 14, category: "Traditional", img: "/abaya.webp", icon: "✨" },
+  { id: 15, category: "Traditional", img: "/abaya_special.webp", icon: "✨" },
+  { id: 16, category: "Dry Cleaning", img: "/hijab.webp", icon: "🧣" },
+  { id: 17, category: "Pressing", img: "/gent_suit.webp", icon: "👗" },
+  { id: 18, category: "Specialty", img: "/dress.webp", icon: "👰" },
+  { id: 19, category: "Specialty", img: "/overcoat.webp", icon: "🧥" },
+  { id: 20, category: "Add-On", img: "/military_suite.webp", icon: "🌸" },
+  { id: 21, category: "Express", img: "/blouse.webp", icon: "👚" },
+  { id: 22, category: "Specialty", img: "/bathrob.webp", icon: "🛁" },
+  { id: 23, category: "Express", img: "/dresslong.webp", icon: "🛁" },
 ];
 
 const SLIDES = [
-  { img: "/src/assets/eco.webp", key: "slide1" },
-  { img: "/src/assets/pCollection.webp", key: "slide2" },
-  { img: "/src/assets/expert.webp", key: "slide3" },
+  { img: "/eco.webp", key: "slide1" },
+  { img: "/pCollection.webp", key: "slide2" },
+  { img: "/expert.webp", key: "slide3" },
 ];
 
 const Narbarser = () => {
@@ -252,7 +252,7 @@ const Narbarser = () => {
           {/* Column 1 */}
           <div>
             <img
-              src="/src/assets/companylogo.png"
+              src="/companylogo.png"
               alt="Akoya Logo"
               className="w-40 mb-6"
             />

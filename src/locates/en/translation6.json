@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "Vision & Mission",
+    "subtitle": "Akoya Premium Laundry",
+    "tagline": "Redefining Fabric Care and Personal Luxury in Qatar"
+  },
+  "imageCard": {
+    "heading": "Excellence in Every Detail",
+    "subtext": "Technology, Artistry, and Care"
+  },
+  "ctaCard": {
+    "heading": "Experience Excellence Today",
+    "button": "Book Now"
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "To redefine fabric care and personal luxury in Qatar through innovation, fragrance, and flawless service — making Akoya Premium Laundry the symbol of elegance and trust in every home."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "At Akoya Premium Laundry, we strive to offer premium laundry, delivery, and custom perfume solutions that combine technology, artistry, and care. Our mission is to transform daily routines into refined experiences through exceptional service, attention to detail, and sustainable practices."
+  },
+  "coreValues": {
+    "heading": "Our Core Values",
+    "excellence": {
+      "title": "Excellence",
+      "desc": "Every item, every wash, every fragrance meets the highest standards."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "desc": "We use advanced systems and smart logistics to deliver faster and cleaner results."
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "desc": "We commit to eco-friendly methods and responsible operations."
+    },
+    "customerFocus": {
+      "title": "Customer Focus",
+      "desc": "Your satisfaction drives everything we do."
+    }
+  },
+  "footer": {
+    "about": "Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.",
+    "servicesHeading": "OUR SERVICES",
+    "servicesList": ["Premium Laundry", "Dry Cleaning", "Steam Pressing", "Fragrance Infusion", "Couture Care", "VIP Club"],
+    "contactHeading": "CONTACT US",
+    "area": "Area: Al Wakrah",
+    "zone": "Zone: 90",
+    "street": "Street No.: 693",
+    "building": "Building No.: 35",
+    "newsletterHeading": "NEWSLETTER",
+    "newsletterText": "Subscribe for exclusive offers and garment care tips.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 AKOYA Luxury Laundry. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

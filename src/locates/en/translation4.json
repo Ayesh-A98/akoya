@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "Luxury Laundry. Reimagined.",
+    "tagline": "AKOYA COLLECTION",
+    "cta": "Schedule Your Pickup"
+  },
+  "whyChoose": {
+    "headingPrefix": "Why Choose",
+    "brand": "Akoya",
+    "cards": [
+      {
+        "title": "Premium Quality",
+        "desc": "We use only the finest eco-friendly detergents and state-of-the-art"
+      },
+      {
+        "title": "Personalized Service",
+        "desc": "Tailored solutions for each garment with our expert fabric specialists"
+      },
+      {
+        "title": "Convenience",
+        "desc": "24/7 booking with flexible pickup and delivery options"
+      }
+    ]
+  },
+  "journey": {
+    "heading": "Our Service Journey",
+    "steps": [
+      { "title": "1. Select Wash Type", "desc": "Standard or Express wash options to suit your needs" },
+      { "title": "2. Choose Garments", "desc": "From daily wear to delicate couture - we handle all" },
+      { "title": "3. Steam Finishing", "desc": "Professional pressing for impeccable results" },
+      { "title": "4. Fragrance Infusion", "desc": "Luxury scents for men and women" },
+      { "title": "5. Packaging", "desc": "Choose from our premium wrapping options" },
+      { "title": "6. Personalization", "desc": "Add a custom card for gifts" },
+      { "title": "7. WhatsApp Checkout", "desc": "Easy confirmation via WhatsApp" },
+      { "title": "8. AI Assistance", "desc": "3D avatars guide you in Arabic & English" }
+    ]
+  },
+  "specialists": {
+    "heading": "Meet Our Fabric Specialists",
+    "desc": "Our team of garment care experts brings decades of combined experience in handling luxury fabrics",
+    "team": [
+      { "name": "Ahmed Al-Mansoori", "role": "Head of Couture Care", "bio": "20+ years in luxury garment care" },
+      { "name": "Layla Hassan", "role": "Fabric Technology Expert", "bio": "Fabric scientist and preservation expert" },
+      { "name": "Yousef Ibrahim", "role": "Operations Director", "bio": "Ensuring seamless service delivery" }
+    ]
+  },
+  "footer": {
+    "aboutDesc": "Luxury garment care redefined. Serving Doha's discerning clients with unparalleled quality and service.",
+    "servicesTitle": "OUR SERVICES",
+    "services": [
+      "Premium Laundry",
+      "Dry Cleaning",
+      "Steam Pressing",
+      "Fragrance Infusion",
+      "Couture Care",
+      "VIP Club"
+    ],
+    "contactTitle": "CONTACT US",
+    "area": "Area: Al Wakrah",
+    "zone": "Zone: 90",
+    "street": "Street No.: 693",
+    "building": "Building No.: 35",
+    "phone1": "+97433689955",
+    "phone2": "+97433689996",
+    "email": "info@akoyaluxurylaundry.com",
+    "newsletterTitle": "NEWSLETTER",
+    "newsletterDesc": "Subscribe for exclusive offers and garment care tips.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "\u00a9 2025 AKOYA Luxury Laundry. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

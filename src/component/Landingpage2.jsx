@@ -11,19 +11,19 @@ const Landingpage2 = () => {
     {
       title: t("card1.title"),
       desc: t("card1.description"),
-      img: "/src/assets/platinumCare.webp",
+      img: "/platinumCare.webp",
       icon: "👔",
     },
     {
       title: t("card2.title"),
       desc: t("card2.description"),
-      img: "/src/assets/exectiveCollection.jpg",
+      img: "/exectiveCollection.jpg",
       icon: "✨",
     },
     {
       title: t("card3.title"),
       desc: t("card3.description"),
-      img: "/src/assets/professionalCollection.webp",
+      img: "/professionalCollection.webp",
       icon: "🧵",
     },
   ];

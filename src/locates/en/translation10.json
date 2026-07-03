@@ -1,0 +1,26 @@
+{
+  "header": {
+    "brand": "AKOYA LUXURY LAUNDRY",
+    "subtitle": "Create your premium account"
+  },
+  "fields": {
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "whatsapp": "WhatsApp Phone Number",
+    "whatsappPlaceholder": "+1234567890",
+    "whatsappHint": "Enter your full WhatsApp number with country code (e.g., +1234567890)"
+  },
+  "terms": {
+    "agreePrefix": "I agree to the",
+    "agreeLink": "terms and conditions"
+  },
+  "actions": {
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in"
+  }
+}
