@@ -12,9 +12,10 @@ const Navbar = () => {
   const isVisionPage = location.pathname === "/vision";
   const isLoginPage = location.pathname === "/login";
   const isCreatePage = location.pathname === "/create";
-const { t, i18n } = useTranslation();
-console.log("Language:", i18n.language);
-console.log("Translation:", t("navbar.home"));
+
+  const { t, i18n } = useTranslation();
+
+  // Scroll listener
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -24,14 +25,25 @@ console.log("Translation:", t("navbar.home"));
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (isLoginPage || isCreatePage) return null;
+  // Language direction / lang attribute sync
   useEffect(() => {
-  document.documentElement.dir =
-    i18n.language.startsWith("ur") ? "rtl" : "ltr";
+    document.documentElement.dir =
+      i18n.language.startsWith("ur") ? "rtl" : "ltr";
 
-  document.documentElement.lang =
-    i18n.language.startsWith("ur") ? "ur" : "en";
-}, [i18n.language]);
+    document.documentElement.lang =
+      i18n.language.startsWith("ur") ? "ur" : "en";
+  }, [i18n.language]);
+
+  // Early return now happens AFTER all hooks have run
+  if (isLoginPage || isCreatePage) return null;
+
+  const toggleLanguage = () => {
+    const lang = i18n.language.startsWith("ur") ? "en" : "ur";
+    i18n.changeLanguage(lang);
+
+    document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
+    document.documentElement.lang = lang;
+  };
 
   return (
     <nav
@@ -65,25 +77,20 @@ console.log("Translation:", t("navbar.home"));
         <div className="hidden lg:flex gap-4 items-center">
 
           <button
-  className="border border-white text-white rounded-full h-[40px] w-[90px]"
-  onClick={() => {
-    const lang = i18n.language.startsWith("ur") ? "en" : "ur";
-    i18n.changeLanguage(lang);
+            className="border border-white text-white rounded-full h-[40px] w-[90px]"
+            onClick={toggleLanguage}
+          >
+            {i18n.language.startsWith("ur") ? "English" : "اردو"}
+          </button>
 
-    document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
-    document.documentElement.lang = lang;
-  }}
->
-  {i18n.language.startsWith("ur") ? "English" : "اردو"}
-</button>
           <Link to="/login">
             <button className="border border-[#D4AF37] text-white rounded-full h-[40px] w-[130px]">
-            {t("navbar.login")}
+              {t("navbar.login")}
             </button>
           </Link>
 
           <Link to="/book">
-            <button className="bg-[#D4AF37] text-black rounded-full h-[40px] w-[130px] relative    hover:scale-110 transition">
+            <button className="bg-[#D4AF37] text-black rounded-full h-[40px] w-[130px] relative hover:scale-110 transition">
               {t("navbar.book")}
             </button>
           </Link>
@@ -110,6 +117,13 @@ console.log("Translation:", t("navbar.home"));
           <Link to="/about" onClick={() => setOpen(false)}>ABOUT</Link>
           <Link to="/vision" onClick={() => setOpen(false)}>VISION & MISSION</Link>
           <Link to="/contact" onClick={() => setOpen(false)}>CONTACT</Link>
+
+          <button
+            className="border border-white text-white rounded-full h-[40px] w-[90px]"
+            onClick={toggleLanguage}
+          >
+            {i18n.language.startsWith("ur") ? "English" : "اردو"}
+          </button>
 
           <Link to="/login">
             <button className="border border-[#D4AF37] rounded-full px-6 py-2">
